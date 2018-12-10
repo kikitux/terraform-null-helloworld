@@ -3,7 +3,7 @@ resource "random_pet" "mypet" {
     timestamp = "${timestamp()}"
   }
 
-  separator = " "
+  separator = "-"
 }
 
 resource "null_resource" "helloWorld" {
