@@ -12,3 +12,20 @@ resource "null_resource" "helloWorld" {
   }
  
 }
+
+
+resource "null_resource" "env" {
+  provisioner "local-exec" {
+    command = "env"
+  }
+ 
+}
+
+resource "null_resource" "grep" {
+  provisioner "local-exec" {
+    command = "grep -iR myenv ."
+  }
+ 
+}
+
+
