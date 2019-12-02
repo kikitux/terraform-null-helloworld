@@ -14,7 +14,7 @@ resource "null_resource" "helloWorld" {
 }
 
 
-resource "null_resource" "env" {
+resource "null_resource" "myenv" {
   provisioner "local-exec" {
     command = "env"
   }
