@@ -28,4 +28,6 @@ resource "null_resource" "grep" {
  
 }
 
-
+output "hello" {
+  value = "world"
+}
