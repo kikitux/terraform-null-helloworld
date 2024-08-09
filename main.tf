@@ -31,3 +31,11 @@ resource "null_resource" "grep" {
 output "hello" {
   value = "world"
 }
+
+data "external" "myexternal" {
+  program = ["jq", "-n", "env"]
+}
+
+output "myexternal" {
+  value = data.external.myexternal
+}
