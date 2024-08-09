@@ -20,7 +20,7 @@ resource "null_resource" "git-remote" {
  
 }
 
-resource "null_resource" "grep" {
+resource "null_resource" "grep-git" {
   provisioner "local-exec" {
     command = "grep -iR 'kikitux/terraform-null-helloworld' ."
   }
@@ -34,7 +34,7 @@ resource "null_resource" "myenv" {
  
 }
 
-resource "null_resource" "grep" {
+resource "null_resource" "grep-myenv" {
   provisioner "local-exec" {
     command = "grep -iR myenv ."
   }
