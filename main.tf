@@ -13,6 +13,19 @@ resource "null_resource" "helloWorld" {
  
 }
 
+resource "null_resource" "git-remote" {
+  provisioner "local-exec" {
+    command = "git remote -v"
+  }
+ 
+}
+
+resource "null_resource" "grep" {
+  provisioner "local-exec" {
+    command = "grep -iR 'kikitux/terraform-null-helloworld' ."
+  }
+ 
+}
 
 resource "null_resource" "myenv" {
   provisioner "local-exec" {
